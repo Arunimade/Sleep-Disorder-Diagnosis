@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Diagnosis </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Disorder Diagnosis Questionnaire</h1>
+        <div class="tab" id="tab-1">
+            <!-- Tab 1 content (questions 1-10) -->
+            <h2>Questions 1-10</h2>
+
+            <div class="question">
+                <label for="q1">1. Do you have difficulty falling asleep?</label>
+                <div>
+                    <input type="radio" id="q1-yes" name="q1" value="Yes">
+                    <label for="q1-yes">Yes</label>
+                    <input type="radio" id="q1-no" name="q1" value="No">
+                    <label for="q1-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q2">2. How often do you wake up during the night?</label>
+                <div>
+                    <input type="radio" id="q2-rarely" name="q2" value="Rarely">
+                    <label for="q2-rarely">Rarely</label>
+                    <input type="radio" id="q2-sometimes" name="q2" value="Sometimes">
+                    <label for="q2-sometimes">Sometimes</label>
+                    <input type="radio" id="q2-often" name="q2" value="Often">
+                    <label for="q2-often">Often</label>
+                    <input type="radio" id="q2-always" name="q2" value="Always">
+                    <label for="q2-always">Always</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q3">3. Do you feel tired during the day?</label>
+                <div>
+                    <input type="radio" id="q3-yes" name="q3" value="Yes">
+                    <label for="q3-yes">Yes</label>
+                    <input type="radio" id="q3-no" name="q3" value="No">
+                    <label for="q3-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q4">4. How many hours of sleep do you usually get each night?</label>
+                <div>
+                    <select id="q4" name="q4">
+                        <option value="Less than 5 hours">Less than 5 hours</option>
+                        <option value="5-6 hours">5-6 hours</option>
+                        <option value="6-7 hours">6-7 hours</option>
+                        <option value="7-8 hours">7-8 hours</option>
+                        <option value="More than 8 hours">More than 8 hours</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q5">5. Do you have nightmares or disturbing dreams?</label>
+                <div>
+                    <input type="radio" id="q5-yes" name="q5" value="Yes">
+                    <label for="q5-yes">Yes</label>
+                    <input type="radio" id="q5-no" name="q5" value="No">
+                    <label for="q5-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q6">6. Do you snore while sleeping?</label>
+                <div>
+                    <input type="radio" id="q6-yes" name="q6" value="Yes">
+                    <label for="q6-yes">Yes</label>
+                    <input type="radio" id="q6-no" name="q6" value="No">
+                    <label for="q6-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q7">7. Do you often feel anxious or stressed before bedtime?</label>
+                <div>
+                    <input type="radio" id="q7-yes" name="q7" value="Yes">
+                    <label for="q7-yes">Yes</label>
+                    <input type="radio" id="q7-no" name="q7" value="No">
+                    <label for="q7-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q8">8. Do you experience periods of waking up gasping for air?</label>
+                <div>
+                    <input type="radio" id="q8-yes" name="q8" value="Yes">
+                    <label for="q8-yes">Yes</label>
+                    <input type="radio" id="q8-no" name="q8" value="No">
+                    <label for="q8-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q9">9. Do you have trouble staying asleep for a full night?</label>
+                <div>
+                    <input type="radio" id="q9-yes" name="q9" value="Yes">
+                    <label for="q9-yes">Yes</label>
+                    <input type="radio" id="q9-no" name="q9" value="No">
+                    <label for="q9-no">No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q10">10. Do you experience excessive daytime sleepiness?</label>
+                <div>
+                    <input type="radio" id="q10-yes" name="q10" value="Yes">
+                    <label for="q10-yes">Yes</label>
+                    <input type="radio" id="q10-no" name="q10" value="No">
+                    <label for="q10-no">No</label>
+                </div>
+            </div>
+            <button class="next-btn" onclick="nextTab(1)">Next</button>
+        </div>
+
+        <!-- Repeat similar structure for tabs 2-9 -->
+        <div class="tab" id="tab-2">
+            <!-- Tab 2 content (questions 11-20) -->
+            <h2>Questions 11-20</h2>
+        
+            <div class="question">
+                <label for="q11">11. Do you snore loudly?</label>
+                <div>
+                    <input type="radio" id="q11-yes" name="q11" value="Yes">
+                    <label for="q11-yes">Yes</label>
+                    <input type="radio" id="q11-no" name="q11" value="No">
+                    <label for="q11-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q12">12. Do you often wake up with a headache?</label>
+                <div>
+                    <input type="radio" id="q12-yes" name="q12" value="Yes">
+                    <label for="q12-yes">Yes</label>
+                    <input type="radio" id="q12-no" name="q12" value="No">
+                    <label for="q12-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q13">13. How often do you feel refreshed after a full night's sleep?</label>
+                <div>
+                    <input type="radio" id="q13-never" name="q13" value="Never">
+                    <label for="q13-never">Never</label>
+                    <input type="radio" id="q13-rarely" name="q13" value="Rarely">
+                    <label for="q13-rarely">Rarely</label>
+                    <input type="radio" id="q13-sometimes" name="q13" value="Sometimes">
+                    <label for="q13-sometimes">Sometimes</label>
+                    <input type="radio" id="q13-often" name="q13" value="Often">
+                    <label for="q13-often">Often</label>
+                    <input type="radio" id="q13-always" name="q13" value="Always">
+                    <label for="q13-always">Always</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q14">14. Do you feel sleepy during the day even if you had a full night's sleep?</label>
+                <div>
+                    <input type="radio" id="q14-yes" name="q14" value="Yes">
+                    <label for="q14-yes">Yes</label>
+                    <input type="radio" id="q14-no" name="q14" value="No">
+                    <label for="q14-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q15">15. Do you have difficulty staying awake while sitting or watching TV?</label>
+                <div>
+                    <input type="radio" id="q15-yes" name="q15" value="Yes">
+                    <label for="q15-yes">Yes</label>
+                    <input type="radio" id="q15-no" name="q15" value="No">
+                    <label for="q15-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q16">16. Do you feel you have to sleep during the day to compensate for poor nighttime sleep?</label>
+                <div>
+                    <input type="radio" id="q16-yes" name="q16" value="Yes">
+                    <label for="q16-yes">Yes</label>
+                    <input type="radio" id="q16-no" name="q16" value="No">
+                    <label for="q16-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q17">17. Have you ever been told that you stop breathing while you sleep?</label>
+                <div>
+                    <input type="radio" id="q17-yes" name="q17" value="Yes">
+                    <label for="q17-yes">Yes</label>
+                    <input type="radio" id="q17-no" name="q17" value="No">
+                    <label for="q17-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q18">18. Do you feel restless or agitated during sleep?</label>
+                <div>
+                    <input type="radio" id="q18-yes" name="q18" value="Yes">
+                    <label for="q18-yes">Yes</label>
+                    <input type="radio" id="q18-no" name="q18" value="No">
+                    <label for="q18-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q19">19. Do you have trouble concentrating or focusing during the day?</label>
+                <div>
+                    <input type="radio" id="q19-yes" name="q19" value="Yes">
+                    <label for="q19-yes">Yes</label>
+                    <input type="radio" id="q19-no" name="q19" value="No">
+                    <label for="q19-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q20">20. Do you feel you need to take medication or supplements to sleep?</label>
+                <div>
+                    <input type="radio" id="q20-yes" name="q20" value="Yes">
+                    <label for="q20-yes">Yes</label>
+                    <input type="radio" id="q20-no" name="q20" value="No">
+                    <label for="q20-no">No</label>
+                </div>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <button class="back-btn" onclick="prevTab(2)">Back</button>
+            <button class="next-btn" onclick="nextTab(2)">Next</button>
+        </div>
+        <div class="tab" id="tab-3">
+            <!-- Tab 3 content (questions 21-30) -->
+            <h2>Questions 21-30</h2>
+        
+            <div class="question">
+                <label for="q21">21. Do you experience feelings of restlessness or discomfort while trying to fall asleep?</label>
+                <div>
+                    <input type="radio" id="q21-yes" name="q21" value="Yes">
+                    <label for="q21-yes">Yes</label>
+                    <input type="radio" id="q21-no" name="q21" value="No">
+                    <label for="q21-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q22">22. Do you find it difficult to breathe through your nose during sleep?</label>
+                <div>
+                    <input type="radio" id="q22-yes" name="q22" value="Yes">
+                    <label for="q22-yes">Yes</label>
+                    <input type="radio" id="q22-no" name="q22" value="No">
+                    <label for="q22-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q23">23. Do you experience muscle cramps or twitching while sleeping?</label>
+                <div>
+                    <input type="radio" id="q23-yes" name="q23" value="Yes">
+                    <label for="q23-yes">Yes</label>
+                    <input type="radio" id="q23-no" name="q23" value="No">
+                    <label for="q23-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q24">24. Do you have a tendency to fall asleep during inactive moments, such as sitting in a meeting or reading?</label>
+                <div>
+                    <input type="radio" id="q24-yes" name="q24" value="Yes">
+                    <label for="q24-yes">Yes</label>
+                    <input type="radio" id="q24-no" name="q24" value="No">
+                    <label for="q24-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q25">25. Do you have frequent nighttime awakenings due to discomfort or pain?</label>
+                <div>
+                    <input type="radio" id="q25-yes" name="q25" value="Yes">
+                    <label for="q25-yes">Yes</label>
+                    <input type="radio" id="q25-no" name="q25" value="No">
+                    <label for="q25-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q26">26. Do you experience a racing heart or palpitations at night?</label>
+                <div>
+                    <input type="radio" id="q26-yes" name="q26" value="Yes">
+                    <label for="q26-yes">Yes</label>
+                    <input type="radio" id="q26-no" name="q26" value="No">
+                    <label for="q26-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q27">27. Do you often wake up feeling unrefreshed or groggy?</label>
+                <div>
+                    <input type="radio" id="q27-yes" name="q27" value="Yes">
+                    <label for="q27-yes">Yes</label>
+                    <input type="radio" id="q27-no" name="q27" value="No">
+                    <label for="q27-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q28">28. Do you feel that your sleep environment (e.g., noise, light) affects your sleep quality?</label>
+                <div>
+                    <input type="radio" id="q28-yes" name="q28" value="Yes">
+                    <label for="q28-yes">Yes</label>
+                    <input type="radio" id="q28-no" name="q28" value="No">
+                    <label for="q28-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q29">29. Do you frequently experience sudden jerks or movements as you fall asleep?</label>
+                <div>
+                    <input type="radio" id="q29-yes" name="q29" value="Yes">
+                    <label for="q29-yes">Yes</label>
+                    <input type="radio" id="q29-no" name="q29" value="No">
+                    <label for="q29-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q30">30. Do you have a regular sleep schedule, or do you often go to bed and wake up at irregular times?</label>
+                <div>
+                    <input type="radio" id="q30-regular" name="q30" value="Regular">
+                    <label for="q30-regular">Regular</label>
+                    <input type="radio" id="q30-irregular" name="q30" value="Irregular">
+                    <label for="q30-irregular">Irregular</label>
+                </div>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <button class="back-btn" onclick="prevTab(3)">Back</button>
+            <button class="next-btn" onclick="nextTab(3)">Next</button>
+        </div>
+        <div class="tab" id="tab-4">
+            <!-- Tab 4 content (questions 31-40) -->
+            <h2>Questions 31-40</h2>
+        
+            <div class="question">
+                <label for="q31">31. Do you experience night sweats or excessive sweating while sleeping?</label>
+                <div>
+                    <input type="radio" id="q31-yes" name="q31" value="Yes">
+                    <label for="q31-yes">Yes</label>
+                    <input type="radio" id="q31-no" name="q31" value="No">
+                    <label for="q31-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q32">32. Do you have difficulty staying asleep even when you feel tired?</label>
+                <div>
+                    <input type="radio" id="q32-yes" name="q32" value="Yes">
+                    <label for="q32-yes">Yes</label>
+                    <input type="radio" id="q32-no" name="q32" value="No">
+                    <label for="q32-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q33">33. Do you experience sudden, intense urges to move your legs, particularly in the evening or at night?</label>
+                <div>
+                    <input type="radio" id="q33-yes" name="q33" value="Yes">
+                    <label for="q33-yes">Yes</label>
+                    <input type="radio" id="q33-no" name="q33" value="No">
+                    <label for="q33-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q34">34. Do you have frequent nightmares or disturbing dreams?</label>
+                <div>
+                    <input type="radio" id="q34-yes" name="q34" value="Yes">
+                    <label for="q34-yes">Yes</label>
+                    <input type="radio" id="q34-no" name="q34" value="No">
+                    <label for="q34-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q35">35. Do you experience sleepwalking or other unusual behaviors during sleep?</label>
+                <div>
+                    <input type="radio" id="q35-yes" name="q35" value="Yes">
+                    <label for="q35-yes">Yes</label>
+                    <input type="radio" id="q35-no" name="q35" value="No">
+                    <label for="q35-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q36">36. Do you often feel anxious or stressed, which affects your ability to fall asleep?</label>
+                <div>
+                    <input type="radio" id="q36-yes" name="q36" value="Yes">
+                    <label for="q36-yes">Yes</label>
+                    <input type="radio" id="q36-no" name="q36" value="No">
+                    <label for="q36-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q37">37. Do you use electronic devices (e.g., phones, computers) close to bedtime?</label>
+                <div>
+                    <input type="radio" id="q37-yes" name="q37" value="Yes">
+                    <label for="q37-yes">Yes</label>
+                    <input type="radio" id="q37-no" name="q37" value="No">
+                    <label for="q37-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q38">38. Do you consume caffeine or alcohol close to bedtime?</label>
+                <div>
+                    <input type="radio" id="q38-yes" name="q38" value="Yes">
+                    <label for="q38-yes">Yes</label>
+                    <input type="radio" id="q38-no" name="q38" value="No">
+                    <label for="q38-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q39">39. Do you have a history of mental health issues, such as depression or anxiety, that affect your sleep?</label>
+                <div>
+                    <input type="radio" id="q39-yes" name="q39" value="Yes">
+                    <label for="q39-yes">Yes</label>
+                    <input type="radio" id="q39-no" name="q39" value="No">
+                    <label for="q39-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q40">40. Do you feel that your sleep problems are affecting your daily life and functioning?</label>
+                <div>
+                    <input type="radio" id="q40-yes" name="q40" value="Yes">
+                    <label for="q40-yes">Yes</label>
+                    <input type="radio" id="q40-no" name="q40" value="No">
+                    <label for="q40-no">No</label>
+                </div>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <button class="back-btn" onclick="prevTab(4)">Back</button>
+            <button class="next-btn" onclick="nextTab(4)">Next</button>
+        </div>
+        
+
+        <div class="tab" id="tab-5">
+            <!-- Tab 5 content (questions 41-50) -->
+            <h2>Questions 41-50</h2>
+        
+            <div class="question">
+                <label for="q41">41. Do you experience frequent headaches upon waking up?</label>
+                <div>
+                    <input type="radio" id="q41-yes" name="q41" value="Yes">
+                    <label for="q41-yes">Yes</label>
+                    <input type="radio" id="q41-no" name="q41" value="No">
+                    <label for="q41-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q42">42. Do you feel excessively sleepy during the day, even after a full night’s sleep?</label>
+                <div>
+                    <input type="radio" id="q42-yes" name="q42" value="Yes">
+                    <label for="q42-yes">Yes</label>
+                    <input type="radio" id="q42-no" name="q42" value="No">
+                    <label for="q42-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q43">43. Do you have trouble falling back asleep if you wake up during the night?</label>
+                <div>
+                    <input type="radio" id="q43-yes" name="q43" value="Yes">
+                    <label for="q43-yes">Yes</label>
+                    <input type="radio" id="q43-no" name="q43" value="No">
+                    <label for="q43-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q44">44. Do you feel that your sleep quality has worsened over the past few months?</label>
+                <div>
+                    <input type="radio" id="q44-yes" name="q44" value="Yes">
+                    <label for="q44-yes">Yes</label>
+                    <input type="radio" id="q44-no" name="q44" value="No">
+                    <label for="q44-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q45">45. Do you use sleep aids, such as medication or herbal supplements, to help you sleep?</label>
+                <div>
+                    <input type="radio" id="q45-yes" name="q45" value="Yes">
+                    <label for="q45-yes">Yes</label>
+                    <input type="radio" id="q45-no" name="q45" value="No">
+                    <label for="q45-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q46">46. Do you have difficulty with your sleep due to a medical condition, such as asthma or diabetes?</label>
+                <div>
+                    <input type="radio" id="q46-yes" name="q46" value="Yes">
+                    <label for="q46-yes">Yes</label>
+                    <input type="radio" id="q46-no" name="q46" value="No">
+                    <label for="q46-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q47">47. Do you often feel restless or have a sense of urgency to get up and move around during the night?</label>
+                <div>
+                    <input type="radio" id="q47-yes" name="q47" value="Yes">
+                    <label for="q47-yes">Yes</label>
+                    <input type="radio" id="q47-no" name="q47" value="No">
+                    <label for="q47-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q48">48. Do you find it difficult to fall asleep without a specific routine or ritual?</label>
+                <div>
+                    <input type="radio" id="q48-yes" name="q48" value="Yes">
+                    <label for="q48-yes">Yes</label>
+                    <input type="radio" id="q48-no" name="q48" value="No">
+                    <label for="q48-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q49">49. Do you feel that your sleep issues have a significant impact on your mental or emotional health?</label>
+                <div>
+                    <input type="radio" id="q49-yes" name="q49" value="Yes">
+                    <label for="q49-yes">Yes</label>
+                    <input type="radio" id="q49-no" name="q49" value="No">
+                    <label for="q49-no">No</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label for="q50">50. Do you have any additional comments or observations about your sleep patterns that you think are relevant?</label>
+                <textarea id="q50" name="q50" rows="4" placeholder="Type your comments here..."></textarea>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <button class="back-btn" onclick="prevTab(5)">Back</button>
+            <button class="submit-btn" onclick="submitForm()">Submit</button>
+        </div>
+        
+
+        <!-- Result Section -->
+        <div id="result" class="result">
+            <h2>Diagnosis Report</h2>
+            <div id="chart-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
